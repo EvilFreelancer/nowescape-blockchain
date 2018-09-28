@@ -1,0 +1,8 @@
+/.idea/
+/databases/
+/logs/
+/.env
+/docker-compose.yml
+/laravel/public/js/
+/laravel/public/css/
+/laravel/.env
