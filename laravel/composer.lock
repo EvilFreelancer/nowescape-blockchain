@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3f87d7576c61c74d3ed0eb4ee9da2fb6",
+    "content-hash": "fa00ca62ff60c43eb119d0ab745b0e93",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1535,6 +1535,41 @@
             ],
             "description": "Coinmarketcap API PHP client",
             "time": "2018-01-29T09:55:20+00:00"
+        },
+        {
+            "name": "rpasoft/coincapio-api-php",
+            "version": "0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rpasoft/coincapio-api-php.git",
+                "reference": "a0622248bd6f590afd27d02d1d9ea2abee733865"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rpasoft/coincapio-api-php/zipball/a0622248bd6f590afd27d02d1d9ea2abee733865",
+                "reference": "a0622248bd6f590afd27d02d1d9ea2abee733865",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "^6.3",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CoinCapIO\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "CoinCap.io API PHP client",
+            "time": "2018-09-28T14:51:26+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-use App\Models\History;
+use App\Models\Histories;
 use App\Models\Currencies;
 use App\Models\Sources;
 
@@ -83,25 +83,25 @@ Route::prefix('currency')->group(function () {
 Route::prefix('history')->group(function () {
 
     Route::get('', function() {
-        return History::all();
+        return Histories::all();
     });
 
     Route::get('{id}', function($id) {
-        return History::find($id);
+        return Histories::find($id);
     });
 
     Route::post('', function(Request $request) {
-        return History::create($request->all);
+        return Histories::create($request->all);
     });
 
     Route::put('{id}', function(Request $request, $id) {
-        $article = History::findOrFail($id);
+        $article = Histories::findOrFail($id);
         $article->update($request->all());
         return $article;
     });
 
     Route::delete('{id}', function($id) {
-        History::find($id)->delete();
+        Histories::find($id)->delete();
         return 204;
     });
 

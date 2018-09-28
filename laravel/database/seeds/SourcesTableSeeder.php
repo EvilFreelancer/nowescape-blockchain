@@ -17,6 +17,6 @@ class SourcesTableSeeder extends Seeder
 
         // Create few columns
         Sources::create(['name' => 'CoinMarketCap', 'url' => 'https://coinmarketcap.com/']);
-        Sources::create(['name' => 'CoinCap.IO', 'url' => 'https://coincap.io/']);
+        Sources::create(['name' => 'CoinCap', 'url' => 'https://coincap.io/']);
     }
 }

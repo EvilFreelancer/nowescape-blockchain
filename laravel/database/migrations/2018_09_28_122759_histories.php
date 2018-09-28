@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class History extends Migration
+class Histories extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class History extends Migration
      */
     public function up()
     {
-        Schema::create('history', function (Blueprint $table) {
+        Schema::create('histories', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_currency');
             $table->integer('id_source');
-            $table->integer('avg');
+            $table->integer('price');
             $table->integer('change24h');
             $table->timestamps();
         });
@@ -30,6 +30,6 @@ class History extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('history');
+        Schema::dropIfExists('histories');
     }
 }
