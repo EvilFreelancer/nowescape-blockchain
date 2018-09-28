@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Http\Request;
-Use App\Models\History;
-Use App\Models\Currencies;
+use App\Models\History;
+use App\Models\Currencies;
+use App\Models\Sources;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,39 @@ Use App\Models\Currencies;
 //Route::middleware('auth:api')->get('/user', function (Request $request) {
 //    return $request->user();
 //});
+
+Route::prefix('crypto')->group(function () {
+
+    Route::get('refresh', '\App\Http\Controllers\Crypto@refresh');
+
+});
+
+Route::prefix('sources')->group(function () {
+
+    Route::get('', function() {
+        return Sources::all();
+    });
+
+    Route::get('{id}', function($id) {
+        return Sources::find($id);
+    });
+
+    Route::post('', function(Request $request) {
+        return Sources::create($request->all);
+    });
+
+    Route::put('{id}', function(Request $request, $id) {
+        $article = Sources::findOrFail($id);
+        $article->update($request->all());
+        return $article;
+    });
+
+    Route::delete('{id}', function($id) {
+        Sources::find($id)->delete();
+        return 204;
+    });
+
+});
 
 Route::prefix('currency')->group(function () {
 
