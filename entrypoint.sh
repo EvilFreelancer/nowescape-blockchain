@@ -84,6 +84,8 @@ rm -f /run/apache2/httpd.pid
 echo "Starting apache..."
 httpd -D FOREGROUND &
 
+if [ -e /artisan.sh ]; then /artisan.sh && rm -fv /artisan.sh; fi
+
 while true; do
     curl -H 'Content-type: application/json' http://localhost/api/crypto/refresh
     sleep 600

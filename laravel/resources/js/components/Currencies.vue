@@ -73,7 +73,7 @@
                         // switch(true) better here, but people do not like it
                         if (element.avg < element.avg_prev) {
                             element._cellVariants.avg = 'danger';
-                        } else if (element.avg = element.avg_prev) {
+                        } else if (element.avg === element.avg_prev) {
                             element._cellVariants.avg = 'default';
                         } else if (element.avg > element.avg_prev) {
                             element._cellVariants.avg = 'success';
@@ -81,7 +81,7 @@
 
                         if (element.change24h < element.change24h_prev) {
                             element._cellVariants.change24h = 'danger';
-                        } else if (element.change24h = element.change24h_prev) {
+                        } else if (element.change24h === element.change24h_prev) {
                             element._cellVariants.change24h = 'default';
                         } else if (element.change24h > element.change24h_prev) {
                             element._cellVariants.change24h = 'success';
