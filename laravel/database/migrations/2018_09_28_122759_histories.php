@@ -17,8 +17,9 @@ class Histories extends Migration
             $table->increments('id');
             $table->integer('id_currency');
             $table->integer('id_source');
-            $table->integer('price');
-            $table->integer('change24h');
+            $table->dateTime('added_at');
+            $table->float('price');
+            $table->float('change24h');
             $table->timestamps();
         });
     }

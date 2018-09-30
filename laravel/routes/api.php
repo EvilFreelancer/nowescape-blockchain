@@ -22,6 +22,7 @@ use App\Models\Sources;
 
 Route::prefix('crypto')->group(function () {
 
+    Route::get('table', '\App\Http\Controllers\Crypto@table');
     Route::get('refresh', '\App\Http\Controllers\Crypto@refresh');
 
 });

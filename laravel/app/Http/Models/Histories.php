@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Histories extends Model
 {
-    protected $fillable = ['id_currency', 'id_source', 'price', 'change24h'];
+    protected $fillable = ['id_currency', 'id_source', 'added_at', 'price', 'change24h'];
 }
